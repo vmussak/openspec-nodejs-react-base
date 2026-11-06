@@ -1,0 +1,16 @@
+# Skills → ações
+
+Consulte o `SKILL.md` em `.agents/skills/<nome>/` antes de implementar ou revisar.
+
+| Skill                           | Acionar para…                                                                                                                                          | Não usar se…                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| `code-standards-en`             | Nomes em inglês, PR, CQS, early return, tamanho de métodos/classes                                                                                     | Política exige identificadores localizados                                      |
+| `express-rest-http`             | Rotas Express, HTTP, status, OpenAPI, `fetch` externo                                                                                                  | Framework servidor não for Express                                              |
+| `nodejs-typescript-conventions` | TS/Node, ESM, npm, async/await, sem `any`                                                                                                              | Projeto JS puro ou gestor ≠ npm                                                 |
+| `react-frontend-conventions`    | React FC, TSX, Tailwind, hooks, testes de UI                                                                                                           | Class components, styled-components, sem Tailwind (neste repo)                  |
+| `ui-ux-pro-max`                 | Design/revisão de UI (componentes, páginas, paletas, tipografia, landing/dashboard, a11y); ver `SKILL.md` para `scripts/search.py` e `--design-system` | Tarefa só backend/API/dados sem interface; escopo sem decisões visuais ou de UX |
+| `repo-folder-structure`         | Onde criar `features`, pages, controllers/services/data                                                                                                | Layout do monorepo ou framework diferente do template                           |
+| `skill-best-practices`          | Nova skill de agente (agentskills.io), pastas `scripts/` / `references/`                                                                               | Docs gerais, README, código de lib sem ser skill                                |
+| `vitest-testing`                | Vitest, `vi`, AAA, timers, integração HTTP sem supertest                                                                                               | Jest/Sinon como stack principal de mock                                         |
+
+**Ordem sugerida por tarefa:** backend HTTP → `express-rest-http`, depois `repo-folder-structure`, `nodejs-typescript-conventions`, `code-standards-en`. Frontend → `ui-ux-pro-max` (design/UX e sistema visual), depois `react-frontend-conventions`, `repo-folder-structure`, `nodejs-typescript-conventions`, `code-standards-en`. Testes → `vitest-testing` + skill da camada testada.

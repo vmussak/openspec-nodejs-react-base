@@ -1,0 +1,22 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Local environment files
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs and caches
+*.log
+.cache/
+__pycache__/
+*.py[cod]
+
+# Operating system files
+.DS_Store
+Thumbs.db
